@@ -39,18 +39,16 @@ with open(resume_file, "rb") as pdf_file:
 
 
 # --- HERO SECTION ---
-col2 = st.columns(2, gap="small")
 
-with col2:
-    st.title(NAME)
-    st.write(DESCRIPTION)
-    st.download_button(
-        label=" 📄 Download Resume",
-        data=PDFbyte,
-        file_name=resume_file.name,
-        mime="application/octet-stream",
-    )
-    st.write("📫", EMAIL)
+st.title(NAME)
+st.write(DESCRIPTION)
+st.download_button(
+    label=" 📄 Download Resume",
+    data=PDFbyte,
+    file_name=resume_file.name,
+    mime="application/octet-stream",
+)
+st.write("📫", EMAIL)
 
 
 # --- SOCIAL LINKS ---
