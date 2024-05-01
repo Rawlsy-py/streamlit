@@ -22,7 +22,10 @@ SOCIAL_MEDIA = {
     "LinkedIn": "https://www.linkedin.com/in/christopher-m-48045187",
     "GitHub": "https://github.com/Rawlsy-py",
 }
-PROJECTS = {}
+PROJECTS = {
+    "Portfolio": "https://chrismitchell.xyz",
+    "GitHub": "https://github.com/Rawlsy-py",
+}
 
 
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
