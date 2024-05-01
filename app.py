@@ -18,10 +18,10 @@ NAME = "Christopher Mitchell"
 DESCRIPTION = """
 Analytics Engineer
 """
-EMAIL = "johndoe@email.com"
+EMAIL = "chris@chrismitchell.xyz"
 SOCIAL_MEDIA = {
-    "LinkedIn": "https://linkedin.com",
-    "GitHub": "https://github.com",
+    "LinkedIn": "https://www.linkedin.com/in/christopher-m-48045187",
+    "GitHub": "https://github.com/Rawlsy-py",
 }
 PROJECTS = {}
 
