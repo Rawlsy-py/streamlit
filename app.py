@@ -59,9 +59,7 @@ st.write(
     """
 ## Christopher Mitchell
 
-Tamworth, England, B78  
-07852793796  
-[Christopher_m_mitchell@live.co.uk](mailto:Christopher_m_mitchell@live.co.uk)  
+Tamworth, England 
 
 ### Skills
 - Experienced Analytics Engineer specialising in data pipeline development and automation.
