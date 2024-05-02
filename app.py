@@ -14,7 +14,8 @@ PAGE_TITLE = "Digital CV | Christopher Mitchell"
 PAGE_ICON = ":wave:"
 NAME = "Christopher Mitchell"
 DESCRIPTION = """
-Analytics Engineer
+I'm Chris, a dynamic Analytics Engineer with a passion for data-driven solutions and a knack for crafting efficient data pipelines and automation processes.
+After a successful career transition from law to software engineering following the pandemic, I've found my true calling in the tech world.
 """
 EMAIL = "chris@chrismitchell.xyz"
 SOCIAL_MEDIA = {
@@ -22,10 +23,17 @@ SOCIAL_MEDIA = {
     "GitHub": "https://github.com/Rawlsy-py",
 }
 PROJECTS = {
-    "Portfolio": "https://chrismitchell.xyz",
-    "GitHub": "https://github.com/Rawlsy-py",
+    "Rust - CLI application": "https://github.com/Rawlsy-py/rust-shapes",
+    "Rust - Actix API": "https://github.com/Rawlsy-py/actix-tutorial",
+    "Python - AI and ML models": "https://github.com/Rawlsy-py/7CS070_AI_Tech",
+    "Python - Django CRUD application": "https://github.com/Rawlsy-py/djangocrud",
+    "Python - DBT Linter and Formatter using TyperCLI": "https://github.com/Rawlsy-py/formatforge",
+    "Python - Containerised FastAPI app": "https://github.com/Rawlsy-py/fast-api-pokemon",
+    "Python - Data Mining Project": "https://github.com/Rawlsy-py/7CS074_Data_Mining",
+    "Flutter - Mobile App": "https://github.com/Rawlsy-py/7CS085_Mobile_Applications",
+    "JavaScript - PERN Stack To-Do App": "https://github.com/Rawlsy-py/PERN-todo-app",
+    "PHP - Laravel App": "https://github.com/Rawlsy-py/7CS069_Web_Technologies",
 }
-
 
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
@@ -36,17 +44,16 @@ with open(resume_file, "rb") as pdf_file:
 
 
 # --- HERO SECTION ---
-
 st.title(NAME)
 st.write(DESCRIPTION)
-st.download_button(
-    label=" 📄 Download Resume",
-    data=PDFbyte,
-    file_name=resume_file.name,
-    mime="application/octet-stream",
+st.subheader("Career Journey")
+st.write(
+    """
+My journey began in the trenches of finance, where I honed my skills in credit risk modelling and data science at Street UK Foundation in Birmingham. I architected full Azure data stack solutions, led advanced analytics efforts, and revitalised credit risk modelling methodologies with innovative approaches, earning recognition from senior management and trustees alike.
+Eager to expand my horizons, I joined BINK, Ascot, where I spearheaded the creation of agile data pipelines and led the development of a robust Snowflake Data Warehouse solution. Collaborating with cross-functional teams, I've presented actionable insights to stakeholders, automated data testing, and introduced cutting-edge development standards within the data team.
+"""
 )
 st.write("📫", EMAIL)
-
 
 # --- SOCIAL LINKS ---
 st.write("\n")
@@ -54,12 +61,26 @@ cols = st.columns(len(SOCIAL_MEDIA))
 for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
     cols[index].write(f"[{platform}]({link})")
 
+# -- Download CV Button
 
+st.download_button(
+    label=" 📄 Download Resume",
+    data=PDFbyte,
+    file_name=resume_file.name,
+    mime="application/octet-stream",
+)
+
+# --- Projects & Accomplishments ---
+st.write("\n")
+st.subheader("Projects & Accomplishments")
+for project, link in PROJECTS.items():
+    st.write(f"[{project}]({link})")
+
+# --- CV List ---
+
+st.subheader("CV")
 st.write(
     """
-## Christopher Mitchell
-
-Tamworth, England 
 
 ### Skills
 - Experienced Analytics Engineer specialising in data pipeline development and automation.
@@ -127,11 +148,3 @@ Tamworth, England
   - Sept 2007 - July 2011, 7 at A-C including English and Mathematics
 """
 )
-
-
-# --- Projects & Accomplishments ---
-st.write("\n")
-st.subheader("Projects & Accomplishments")
-st.write("---")
-for project, link in PROJECTS.items():
-    st.write(f"[{project}]({link})")
