@@ -21,6 +21,7 @@ EMAIL = "chris@chrismitchell.xyz"
 SOCIAL_MEDIA = {
     "LinkedIn": "https://www.linkedin.com/in/christopher-m-48045187",
     "GitHub": "https://github.com/Rawlsy-py",
+    "Medium": "https://medium.com/@rawlsy-py",
 }
 PROJECTS = {
     "Rust - CLI application": "https://github.com/Rawlsy-py/rust-shapes",
